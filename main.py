@@ -84,10 +84,11 @@ def generate_vector_from_matrix():
 
 def normalised_tpc_vector():
     global tpc_vector
-    total = sum(tpc_vector.copy())
+    ntpc_vec = tpc_vector.copy()
+    total = sum(tpc_vector)
     for i in range(len(tpc_vector)):
-        tpc_vector[i] /= total
-    return tpc_vector
+        ntpc_vec[i] /= total
+    return ntpc_vec
 
 def update_tpc_vector(intended: chr, time: int):
     global tpc_vector
@@ -96,7 +97,9 @@ def update_tpc_vector(intended: chr, time: int):
     tpc_vector[ord(intended) - ord('a')] += tpc_decay * tpc_vector[ord(intended) - ord('a')] + (1 - tpc_decay) * time
 
 def generate_target_vector():
-    v = (normalised_tpc_vector() + generate_vector_from_matrix())
+    vtpc = normalised_tpc_vector()
+    vcmx = generate_vector_from_matrix()
+    v = [vtpc[i] + vcmx[i] for i in range(len(vtpc))]
     print(v)
     return v
 
