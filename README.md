@@ -46,5 +46,3 @@ Feature PRs accepted as long as the total program length is still under 1000 LOC
 
 GPLv3
 
-
-https://github.com/DorianXGH/QAD3T
