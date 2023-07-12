@@ -8,7 +8,33 @@ The goal is to be as feature complete as possible while still fitting in a few h
 
 ## Usage
 
-Just run it with python.
+Install the project with pip, then run `qad3t`.
+
+## Install
+
+### With pip
+
+This project can be installed using pip:
+
+```
+pip install git+https://github.com/DorianXGH/QAD3T
+```
+
+### With Nix
+
+There is a `flake.nix`, so you can clone the repo and use `nix shell` if you want.
+
+## Dev
+
+This project is managed by [poetry](https://python-poetry.org/).
+
+To open a shell in a venv of the project:
+```
+git clone https://github.com/DorianXGH/QAD3T
+cd QAD3T
+poetry shell
+poetry install
+```
 
 ## Contribute
 
@@ -19,3 +45,6 @@ Feature PRs accepted as long as the total program length is still under 1000 LOC
 ## Licence
 
 GPLv3
+
+
+https://github.com/DorianXGH/QAD3T

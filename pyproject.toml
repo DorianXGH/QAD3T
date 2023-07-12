@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "qad3t"
+version = "0.1.0"
+description = "QAD3T is a quick and dirty touch type trainer intended for those trying to learn touch typing."
+authors = ["Dorian Bourgeoisat <dorian@rezel.net>"]
+readme = "README.md"
+homepage = "https://github.com/DorianXGH/QAD3T"
+repository = "https://github.com/DorianXGH/QAD3T"
+license = "GPL-3.0-only"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://git.pains-perdus.fr/histausse/qad3t/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pynput = "^1.7.6"
+
+[tool.poetry.scripts]
+qad3t = "qad3t.cli:main"
+
+#[tool.poetry.group.dev.dependencies]
+#pytest = "*"
+#pytest-cov = "*"
+#
+#[tool.pytest.ini_options]
+#addopts = "--cov"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
