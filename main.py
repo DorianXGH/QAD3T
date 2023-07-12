@@ -137,6 +137,7 @@ def on_press(key):
         else:
             if pressed != ' ':
                 update_confusion_matrix(tgt_str[0], pressed)
+        # print(chr(27) + "[2J")
         # print and go back to start of line
         print(" " + tgt_str + (" "*10) + " WPM : " + str(get_wpm()), end='\r')
         
